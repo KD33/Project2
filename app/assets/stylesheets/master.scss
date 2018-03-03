@@ -25,7 +25,15 @@
 .navbar-inverse .navbar-brand {
   color: #E3E85A;
   font-family: 'Krona One', sans-serif;
+}
 
+.pagination {
+  margin: auto;
+}
+
+.pagination a{
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 body {
