@@ -26,6 +26,14 @@
     </ul>
   </div>
 </nav>
+    <!--flash messages are used to store messages we want to present the user-->
+    <!--in this case, we want to alert the user about a successful/invalid login-->
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
