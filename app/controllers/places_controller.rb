@@ -23,4 +23,9 @@ class PlacesController < ApplicationController
     params.require(:place).permit(:name, :description, :address)
   end
 
+  def show
+    @place = Place.find(params[:id]) #pulls the id out of the URL and uses this to find the specific place
+    #in the db
+  end
+
 end
