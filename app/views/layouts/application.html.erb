@@ -34,7 +34,7 @@
           <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %> <!--leave method to be default since it is a GET request-->
+          <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
         </li>
       <% end %>
     <ul>
@@ -42,8 +42,6 @@
     </ul>
   </div>
 </nav>
-    <!--flash messages are used to store messages we want to present the user-->
-    <!--in this case, we want to alert the user about a successful/invalid login-->
     <% if notice.present? %>
       <p class="alert alert-info"><%= notice %></p>
     <% end %>
