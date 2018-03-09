@@ -37,6 +37,13 @@
   margin-right: 2px;
 }
 
+.help-block{
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+}
+
 body {
   //Rails knows to look inside the assets/images folder
   background: image_url('dust_scratches.png');
