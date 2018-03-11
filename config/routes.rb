@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :comments, only: :create
     #gives us CRUD for our places model and C for comments
   end
+  resources :users, only: :show
 end

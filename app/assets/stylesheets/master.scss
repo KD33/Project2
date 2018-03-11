@@ -16,6 +16,12 @@
   padding: 20px;
 }
 
+
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img{
+  height: 550px;
+  width: 100%;
+}
+
 .navbar {
   //Rails knows to look inside the assets/images folder
   background: image_url('zig_zag.png');
