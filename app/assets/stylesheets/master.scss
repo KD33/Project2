@@ -44,6 +44,10 @@
   padding: 2px 8px 2px 8px;
 }
 
+.clear{
+  clear: both;
+}
+
 body {
   //Rails knows to look inside the assets/images folder
   background: image_url('dust_scratches.png');
