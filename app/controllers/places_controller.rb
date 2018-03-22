@@ -8,11 +8,13 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
+    @photo = Photo.new
   end
 
 
   def create
     @place = current_user.places.create(place_params)
+    puts place_params
     if @place.valid?
       redirect_to root_path
     else
@@ -67,7 +69,7 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    params.require(:place).permit(:name, :description, :address)
+    params.require(:place).permit(:name, :description, :address, :photo)
   end
 
 end
