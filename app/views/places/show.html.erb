@@ -41,6 +41,7 @@
 
 <div class="clear"></div>
 
+</br/>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -58,13 +59,14 @@
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="close">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add Comment", class: 'btn btn-primary' %>
       </div>
       <% end %>
     </div>
   </div>
 </div>
+
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
@@ -89,4 +91,50 @@
       </blockquote>
     </div>
     <% end %>
+</div>
+
+<br />
+<br />
+
+<div class="col-10 offset-1">
+  <h1 class="float-left">Photos</h1>
+
+  <button type="button" class="btn-lg btn-primary float-right" data-toggle="modal" data-target="#AddPhotoModal">
+    Add A Photo
+  </button>
+</div>
+
+<div class="clear"></div>
+
+  <div class="modal fade" id="AddPhotoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add A New Photo For <%= @place.name %></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+            <%= f.input :picture %>
+            <%= f.input :caption %>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <%= f.submit "Create", class:'btn btn-primary' %>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<div>
+  <% @place.photos.each do |photo| %>
+    <%= photo.picture %>
+    <b><%= photo.caption %></b>
+  <% end %>
 </div>

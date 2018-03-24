@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :places do
     resources :comments, only: :create
     #gives us CRUD for our places model and C for comments
+    resources :photos, only: :create
+    #nesting these in places gives us the place_id in the route
   end
   resources :users, only: :show
 end
