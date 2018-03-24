@@ -67,6 +67,22 @@
   clear: both;
 }
 
+.photo-holder{
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  text-align: center;
+}
+
+.photo-holder img{
+  width: 200px;
+  height: 200px;
+}
+
+.photo-holder figcaption{
+  width: 200px;
+}
+
 body {
   background: image_url('dust_scratches.png');
   font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;

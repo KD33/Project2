@@ -8,7 +8,6 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
-    @photo = Photo.new
   end
 
 

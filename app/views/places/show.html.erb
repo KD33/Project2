@@ -138,9 +138,11 @@
     </div>
   </div>
 
-<div>
+<div class="booyah-box col-10 offset-1">
   <% @place.photos.each do |photo| %>
-    <%= photo.picture %>
-    <b><%= photo.caption %></b>
+  <div class="photo-holder">
+    <%= image_tag photo.picture %>
+    <figcaption><%= photo.caption %></figcaption>
+  </div>
   <% end %>
 </div>
