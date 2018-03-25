@@ -11,6 +11,8 @@
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4d4 #bebebd #bebebd #e4e4e4;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
@@ -61,6 +63,20 @@
   background-color: #FFEEEE;
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
+}
+
+.place-details{
+  flex: 1 0 auto;
+}
+
+.place-photo{
+  border-radius: 25px;
+  flex: 0 1 auto;
+  position: relative;
+}
+
+.place-photo img{
+  border-radius: 10px;
 }
 
 .clear{
