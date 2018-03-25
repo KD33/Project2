@@ -34,6 +34,10 @@
     <h1><%= link_to place.name, place_path(place) %></h1>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
+    <!--photo here-->
+    <% if place.photos.present? %>
+      <%= image_tag place.photos.last.picture %>
+    <% end %>
     <% if place.user.present? %>
       <small>Submitted by: <%= place.user.email %></small>
     <% end %>
