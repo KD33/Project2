@@ -36,7 +36,7 @@
     <p><%= place.description %></p><br />
     <!--photo here-->
     <% if place.photos.present? %>
-      <%= image_tag place.photos.last.picture %>
+      <%= image_tag place.photos.first.picture %>
     <% end %>
     <% if place.user.present? %>
       <small>Submitted by: <%= place.user.email %></small>
